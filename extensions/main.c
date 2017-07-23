@@ -47,14 +47,11 @@ static PyObject *quotient(PyObject *self, PyObject *args){
 
 /************************************************************/
 
-// documentation for each functions.
 static char sum_doc[] = "return sum";
 static char diff_doc[] = "return difference";
 static char product_doc[] = "return product";
 static char quo_doc[] = "return quotient";
 
-// defining our functions like below:
-// function_name, function, METH_VARARGS flag, function documents
 static PyMethodDef gmethods[] = {
   {"sum", sum, METH_VARARGS, sum_doc},
   {"difference", difference, METH_VARARGS, diff_doc},
@@ -69,7 +66,7 @@ static struct PyModuleDef gcallibModule = {
   "gcallib",  // module name
   NULL, // means that the module does not support sub-interpreters, because it has global state.
   -1,
-  gmethods  // our functions list
+  gmethods  // functions list that is defined above
 };
 
 // runs while initializing and calls module creation function.
