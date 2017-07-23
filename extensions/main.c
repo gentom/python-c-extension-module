@@ -62,14 +62,13 @@ static PyMethodDef gmethods[] = {
 
 
 static struct PyModuleDef gcallibModule = {
-  PyModuleDef_HEAD_INIT, // head informations for Python C API. It is needed to be first member in this struct !!
-  "gcallib",  // module name
-  NULL, // means that the module does not support sub-interpreters, because it has global state.
+  PyModuleDef_HEAD_INIT,
+  "gcallib",
+  NULL,
   -1,
-  gmethods  // functions list that is defined above
+  gmethods
 };
 
-// runs while initializing and calls module creation function.
 PyMODINIT_FUNC PyInit_gcallib(void){
   return PyModule_Create(&gcallibModule);
 }
