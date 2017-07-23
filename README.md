@@ -1,7 +1,7 @@
-#Python C Extension Module
-This is the practice of python c extension.
+# Python C Extension Module
+I wrote this for my practice of python c extension.
 
-###Build
+### Build
 first
 ```
 $python setup.py install
